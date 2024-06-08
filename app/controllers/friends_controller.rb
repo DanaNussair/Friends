@@ -7,8 +7,8 @@ class FriendsController < ApplicationController
   end
 
   # GET /friends/1 or /friends/1.json
-  def show
-  end
+  # def show
+  # end
 
   # GET /friends/new
   def new
@@ -16,8 +16,8 @@ class FriendsController < ApplicationController
   end
 
   # GET /friends/1/edit
-  def edit
-  end
+  # def edit
+  # end
 
   # POST /friends or /friends.json
   def create

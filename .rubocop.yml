@@ -7,6 +7,7 @@ AllCops:
     - 'bin/**/*'
     - 'log/**/*'
     - 'tmp/**/*'
+    - 'db/*'
 
 Bundler/OrderedGems:
   Exclude:
