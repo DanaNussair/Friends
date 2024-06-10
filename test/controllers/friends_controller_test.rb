@@ -2,6 +2,8 @@ require 'test_helper'
 
 class FriendsControllerTest < ActionDispatch::IntegrationTest
   setup do
+    @user = users(:example_user1) # Load the user fixture
+    sign_in @user
     @friend = friends(:one)
   end
 
@@ -19,7 +21,7 @@ class FriendsControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Friend.count') do
       post friends_url,
            params: { friend: { email: @friend.email, first_name: @friend.first_name, last_name: @friend.last_name,
-                               phone: @friend.phone, twitter: @friend.twitter } }
+                               phone: @friend.phone, twitter: @friend.twitter, user_id: @friend.user_id } }
     end
 
     assert_redirected_to friend_url(Friend.last)
@@ -38,7 +40,7 @@ class FriendsControllerTest < ActionDispatch::IntegrationTest
   test 'should update friend' do
     patch friend_url(@friend),
           params: { friend: { email: @friend.email, first_name: @friend.first_name, last_name: @friend.last_name,
-                              phone: @friend.phone, twitter: @friend.twitter } }
+                              phone: @friend.phone, twitter: @friend.twitter, user_id: @friend.user_id } }
     assert_redirected_to friend_url(@friend)
   end
 
