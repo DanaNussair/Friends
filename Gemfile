@@ -15,6 +15,7 @@ gem 'turbo-rails'
 
 gem 'bootsnap', require: false
 gem 'tzinfo-data', platforms: %i[mswin mswin64 mingw x64_mingw jruby]
+gem 'devise', '~> 4.9', '>= 4.9.4'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

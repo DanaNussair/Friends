@@ -22,6 +22,10 @@ Layout/IndentationStyle:
 Layout/IndentationWidth:
   Width: 2
 
+Layout/LineLength:
+  Exclude: 
+    - 'config/initializers/devise.rb'
+
 Metrics/BlockLength:
   Exclude:
     - 'config/environments/development.rb'
